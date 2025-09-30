@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { LiquidityBookServices, MODE } from '@saros-finance/dlmm-sdk';
-import { PublicKey } from '@solana/web3.js';
 
 // Initialize DLMM service
 const dlmmService = new LiquidityBookServices({
@@ -38,7 +37,6 @@ export async function GET(
     }
 
     // Get quote to determine current price
-    let currentPrice = 0;
     try {
       const quote = await dlmmService.quote({
         amount: 1000000, // 1 token with 6 decimals
@@ -50,12 +48,9 @@ export async function GET(
         }
       });
       
-      if (quote && quote.amountOut) {
-        currentPrice = Number(quote.amountOut) / 1000000; // Convert back to decimal
-      }
+      // Quote processed but not used for now
     } catch (quoteError) {
       console.warn('Failed to get quote for price:', quoteError);
-      currentPrice = 1.0; // Fallback price
     }
 
     // Structure response according to PoolMetrics interface

@@ -168,42 +168,12 @@ export default function SarosDLMMAnalytics() {
                     </p>
                   </div>
                 ) : (
-                                  ) : (
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     {/* Pool discovery not yet implemented */}
                     <Card className="p-6 text-center border-dashed border-2 border-gray-300">
                       <p className="text-gray-500">Pool discovery not yet implemented</p>
                       <p className="text-sm text-gray-400 mt-2">Using default USDC/USDT pool</p>
                     </Card>
-                  </div>
-                      >
-                        <CardContent className="p-4">
-                          <div className="space-y-3">
-                            <div className="flex items-center justify-between">
-                              <h3 className="font-semibold text-lg">{pool.name}</h3>
-                              {selectedPool === pool.address && (
-                                <CheckCircle2 className="h-5 w-5 text-green-400" />
-                              )}
-                            </div>
-                            
-                            <div className="space-y-1 text-sm text-gray-400">
-                              <div className="flex justify-between">
-                                <span>TVL:</span>
-                                <span className="text-white">${formatNumber(pool.tvl)}</span>
-                              </div>
-                              <div className="flex justify-between">
-                                <span>Price:</span>
-                                <span className="text-white">${pool.price}</span>
-                              </div>
-                              <div className="flex justify-between">
-                                <span>Active Bin:</span>
-                                <span className="text-white">{pool.activeBin}</span>
-                              </div>
-                            </div>
-                          </div>
-                        </CardContent>
-                      </Card>
-                    ))}
                   </div>
                 )}
               </CardContent>
