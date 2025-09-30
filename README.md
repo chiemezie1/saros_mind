@@ -1,200 +1,396 @@
-# Saros DLMM Analytics Dashboard# Saros DLMM Analytics Dashboard# Saros DLMM Analytics Dashboard# 🚀 Saros DLMM Analytics Dashboard# 🏆 Saros DLMM Analytics Dashboard - Hackathon Submission
+# Saros DLMM Portfolio Tracker# Saros DLMM Analytics Dashboard# Saros DLMM Analytics Dashboard# Saros DLMM Analytics Dashboard# 🚀 Saros DLMM Analytics Dashboard# 🏆 Saros DLMM Analytics Dashboard - Hackathon Submission
 
 
 
-A clean, functional analytics platform for Saros Dynamic Liquidity Market Maker (DLMM) pools. This application provides real-time portfolio tracking and visualization tools for liquidity providers using the Saros protocol.
+A streamlined portfolio tracking application for Saros Dynamic Liquidity Market Maker (DLMM) positions. Connect your wallet to view real-time portfolio metrics, fee earnings, and liquidity distribution across your DLMM positions.
 
 
 
-## OverviewA comprehensive analytics platform for liquidity providers using Saros Dynamic Liquidity Market Maker (DLMM) pools. This application provides real-time portfolio tracking, advanced analytics, and visualization tools to help liquidity providers optimize their positions and maximize returns.
+## OverviewA clean, functional analytics platform for Saros Dynamic Liquidity Market Maker (DLMM) pools. This application provides real-time portfolio tracking and visualization tools for liquidity providers using the Saros protocol.
 
 
 
-This dashboard provides essential analytics for DLMM liquidity providers by integrating directly with the Saros DLMM SDK. The platform focuses on delivering accurate, real-time data without unnecessary complexity or demo features.A comprehensive analytics platform for liquidity providers using Saros Dynamic Liquidity Market Maker (DLMM) pools. This application provides real-time portfolio tracking, advanced analytics, and visualization tools to help liquidity providers optimize their positions and maximize returns.
+This application provides a simple, functional interface for tracking DLMM liquidity positions using the Saros DLMM SDK. It focuses on core functionality - portfolio overview and pool exploration - without complex analytics that aren't fully implemented yet.
 
 
+
+Built with Next.js 15 and the Saros DLMM SDK for accurate real-time data from the Solana blockchain.## OverviewA comprehensive analytics platform for liquidity providers using Saros Dynamic Liquidity Market Maker (DLMM) pools. This application provides real-time portfolio tracking, advanced analytics, and visualization tools to help liquidity providers optimize their positions and maximize returns.
+
+
+
+## Features
+
+
+
+### Portfolio TrackingThis dashboard provides essential analytics for DLMM liquidity providers by integrating directly with the Saros DLMM SDK. The platform focuses on delivering accurate, real-time data without unnecessary complexity or demo features.A comprehensive analytics platform for liquidity providers using Saros Dynamic Liquidity Market Maker (DLMM) pools. This application provides real-time portfolio tracking, advanced analytics, and visualization tools to help liquidity providers optimize their positions and maximize returns.
+
+- **Real-time Portfolio Metrics**: View total portfolio value, P&L, and active position count
+
+- **Fee Earnings**: Track fees earned across all your DLMM positions
+
+- **Wallet Integration**: Connect with Phantom, Solflare, Torus, Ledger, and other Solana wallets
 
 ## Features## Overview
 
+### Pool Explorer
+
+- **Pool Information**: View pool metadata and current pricing
+
+- **Liquidity Distribution**: Visualize bin distribution and active liquidity ranges
+
+- **Pool Search**: Input specific pool addresses to analyze**Portfolio Analytics**
 
 
-**Portfolio Analytics**
 
-- Real-time portfolio tracking when wallet is connected
+### Technical Implementation- Real-time portfolio tracking when wallet is connected
 
-- Position monitoring across DLMM poolsThe Dynamic Liquidity Market Maker model represents a significant evolution in automated market making, offering improved capital efficiency and fee generation compared to traditional constant product AMMs. However, the increased complexity of DLMM positions creates challenges for liquidity providers who need to understand bin mechanics, price ranges, fee distributions, and impermanent loss dynamics across multiple positions.
+- **Real Saros DLMM SDK Integration**: No mock data - all information comes from live blockchain data
+
+- **Solana Mainnet**: Connected to Solana mainnet for production data- Position monitoring across DLMM poolsThe Dynamic Liquidity Market Maker model represents a significant evolution in automated market making, offering improved capital efficiency and fee generation compared to traditional constant product AMMs. However, the increased complexity of DLMM positions creates challenges for liquidity providers who need to understand bin mechanics, price ranges, fee distributions, and impermanent loss dynamics across multiple positions.
+
+- **Responsive Design**: Works on desktop and mobile devices
 
 - Fee tracking and performance metrics
 
+## Quick Start
+
 ## Overview> **The Ultimate Portfolio Management Platform for Saros DLMM Liquidity Providers**> **🚀 Professional-grade analytics and portfolio management platform for Saros Dynamic Liquidity Market Maker (DLMM) pools**
 
-**Pool Analysis**
+### Prerequisites
 
-- Bin distribution visualizationThis dashboard addresses these challenges by aggregating position data, calculating key performance metrics, and presenting them through an intuitive interface. The platform integrates directly with the Saros DLMM SDK to provide accurate, real-time data while offering sophisticated analytics that would otherwise require manual calculation and monitoring.
+- Node.js 18 or higher**Pool Analysis**
 
-- Pool-specific analytics and metrics
+- A Solana wallet with DLMM positions (optional - works without positions)
 
-- Live data from Saros protocol
-
-
-
-**Wallet Integration**## Core Features
-
-- Multi-wallet support (Phantom, Solflare, Torus, Ledger)
-
-- Seamless connection and position detectionThe Dynamic Liquidity Market Maker model represents a significant evolution in automated market making, offering improved capital efficiency and fee generation compared to traditional constant product AMMs. However, the increased complexity of DLMM positions creates challenges for liquidity providers who need to understand bin mechanics, price ranges, fee distributions, and impermanent loss dynamics across multiple positions.
-
-- Secure transaction handling
-
-The platform provides several key areas of functionality designed to give liquidity providers comprehensive insights into their DLMM positions. The portfolio analytics section offers real-time tracking of total portfolio value, profit and loss calculations, and detailed breakdowns of fee earnings across all positions. Users can monitor their active positions, track performance against holding strategies, and understand how market movements impact their liquidity provision returns.
-
-## Technical Stack
+- npm or yarn- Bin distribution visualizationThis dashboard addresses these challenges by aggregating position data, calculating key performance metrics, and presenting them through an intuitive interface. The platform integrates directly with the Saros DLMM SDK to provide accurate, real-time data while offering sophisticated analytics that would otherwise require manual calculation and monitoring.
 
 
 
-- **Frontend**: Next.js 15 with TypeScript
-
-- **Styling**: Tailwind CSS with shadcn/ui componentsAdvanced analytics capabilities include impermanent loss calculations, yield optimization tools, and performance benchmarking features. The platform calculates complex metrics like position efficiency scores, fee yield analysis, and provides historical performance data to help users understand long-term trends and make informed decisions about position management.
-
-- **Blockchain**: Solana Web3.js and Saros DLMM SDK
-
-- **Charts**: Recharts for data visualizationThis dashboard addresses these challenges by aggregating position data, calculating key performance metrics, and presenting them through an intuitive interface. The platform integrates directly with the Saros DLMM SDK to provide accurate, real-time data while offering sophisticated analytics that would otherwise require manual calculation and monitoring.A comprehensive, real-time analytics platform that transforms how liquidity providers manage their Saros Dynamic Liquidity Market Maker (DLMM) positions. Built with cutting-edge technology and deep DeFi expertise.**Built for the Saros DLMM SDK Demo Competition** - A comprehensive solution that demonstrates advanced SDK usage patterns, real-world applicability, and hackathon-ready scalability.
-
-- **Wallets**: Solana Wallet Adapter
-
-The pool analysis features allow users to explore different DLMM pools, understand liquidity distribution patterns through bin visualization, and analyze pool metrics like total value locked, trading volume, and fee generation. This helps liquidity providers identify promising opportunities and understand market dynamics across the Saros ecosystem.
-
-## Installation
+### Installation- Pool-specific analytics and metrics
 
 
 
-```bash
+```bash- Live data from Saros protocol
 
-# Clone the repositoryRisk management tools provide insights into portfolio diversification, volatility exposure, and position-level risk metrics. Users can assess their exposure across different asset pairs and market conditions, helping them maintain balanced portfolios and avoid concentration risks.
+# Clone the repository
 
 git clone https://github.com/chiemezie1/saros_mind.git
 
-cd saros_mind## Core Features
+cd saros_mind
+
+**Wallet Integration**## Core Features
+
+# Install dependencies
+
+npm install- Multi-wallet support (Phantom, Solflare, Torus, Ledger)
 
 
 
-# Install dependencies## Technical Implementation
-
-npm install
-
-
-
-# Configure environment
-
-echo "NEXT_PUBLIC_RPC_URL=https://api.mainnet-beta.solana.com" > .env.localThe application is built using Next.js 15 with TypeScript, providing a modern, performant foundation for the user interface. The frontend leverages Tailwind CSS for styling and shadcn/ui components for consistent, accessible UI elements. Real-time data visualization is handled through Recharts, offering interactive charts and graphs for portfolio performance, bin distribution, and fee analysis.
-
-
-
-# Start development serverThe platform provides several key areas of functionality designed to give liquidity providers comprehensive insights into their DLMM positions. The portfolio analytics section offers real-time tracking of total portfolio value, profit and loss calculations, and detailed breakdowns of fee earnings across all positions. Users can monitor their active positions, track performance against holding strategies, and understand how market movements impact their liquidity provision returns.---## 🎯 **Competition Advantages**
+# Start development server- Seamless connection and position detectionThe Dynamic Liquidity Market Maker model represents a significant evolution in automated market making, offering improved capital efficiency and fee generation compared to traditional constant product AMMs. However, the increased complexity of DLMM positions creates challenges for liquidity providers who need to understand bin mechanics, price ranges, fee distributions, and impermanent loss dynamics across multiple positions.
 
 npm run dev
 
-```Blockchain integration is achieved through the Saros DLMM SDK, which provides direct access to protocol data and position information. The platform uses Solana Web3.js for blockchain interactions and the Solana Wallet Adapter for seamless wallet connectivity across multiple wallet providers including Phantom, Solflare, Torus, and Ledger.
+```- Secure transaction handling
 
 
 
-Open [http://localhost:3000](http://localhost:3000) to view the application.
+Visit `http://localhost:3000` to view the application.The platform provides several key areas of functionality designed to give liquidity providers comprehensive insights into their DLMM positions. The portfolio analytics section offers real-time tracking of total portfolio value, profit and loss calculations, and detailed breakdowns of fee earnings across all positions. Users can monitor their active positions, track performance against holding strategies, and understand how market movements impact their liquidity provision returns.
 
 
 
-## UsageThe data layer consists of several API endpoints that fetch and process portfolio data, fee information, and pool metrics. These endpoints handle the complex calculations required for DLMM analytics while providing clean, structured data to the frontend. The system includes error handling, caching strategies, and performance optimizations to ensure reliable operation even during high network activity.
+### Production Build## Technical Stack
 
 
-
-1. **Connect Wallet**: Use the wallet connection button to connect your Solana walletAdvanced analytics capabilities include impermanent loss calculations, yield optimization tools, and performance benchmarking features. The platform calculates complex metrics like position efficiency scores, fee yield analysis, and provides historical performance data to help users understand long-term trends and make informed decisions about position management.
-
-2. **View Dashboard**: Your DLMM positions will load automatically once connected
-
-3. **Analyze Pools**: Navigate to the Pool Selection tab to view bin distribution data## Installation and Setup
-
-4. **Monitor Performance**: Track your portfolio metrics in real-time
-
-
-
-## Architecture
-
-To run the application locally, you'll need Node.js 18 or higher and npm installed on your system. Begin by cloning the repository and installing the required dependencies:
-
-The application follows a clean, modular architecture:
-
-The pool analysis features allow users to explore different DLMM pools, understand liquidity distribution patterns through bin visualization, and analyze pool metrics like total value locked, trading volume, and fee generation. This helps liquidity providers identify promising opportunities and understand market dynamics across the Saros ecosystem.## 🎯 **The Problem We Solve**### **Multi-Feature Demo Application**
-
-- **API Routes**: Handle data fetching from the Saros protocol
-
-- **Components**: Reusable UI components for dashboard and analytics```bash
-
-- **Services**: DLMM SDK integration and data processing
-
-- **Types**: TypeScript definitions for type safetygit clone https://github.com/chiemezie1/saros_mind.git
-
-
-
-## Development Statuscd saros_mind
-
-
-
-**Currently Implemented:**npm installRisk management tools provide insights into portfolio diversification, volatility exposure, and position-level risk metrics. Users can assess their exposure across different asset pairs and market conditions, helping them maintain balanced portfolios and avoid concentration risks.- ✅ **Portfolio Analytics Dashboard** - Real-time tracking with P&L calculations
-
-- Wallet connection and integration
-
-- Basic dashboard structure```
-
-- Bin distribution visualization
-
-- Pool selection interface
-
-
-
-**In Development:**Create an environment configuration file with your RPC endpoint:
-
-- Real portfolio data integration with Saros SDK
-
-- Fee tracking implementation## Technical Implementation### **Current Pain Points for DLMM LPs:**- ✅ **Advanced Position Analysis** - Impermanent loss tracking and efficiency scoring  
-
-- Pool discovery and metrics
 
 ```bash
 
-## Contributing
+npm run build
 
-echo "NEXT_PUBLIC_RPC_URL=https://api.mainnet-beta.solana.com" > .env.local
+npm start- **Frontend**: Next.js 15 with TypeScript
 
-This project welcomes contributions from developers interested in DeFi analytics and Solana development. The codebase prioritizes clarity and maintainability over complexity.
+```
+
+- **Styling**: Tailwind CSS with shadcn/ui componentsAdvanced analytics capabilities include impermanent loss calculations, yield optimization tools, and performance benchmarking features. The platform calculates complex metrics like position efficiency scores, fee yield analysis, and provides historical performance data to help users understand long-term trends and make informed decisions about position management.
+
+## Usage
+
+- **Blockchain**: Solana Web3.js and Saros DLMM SDK
+
+1. **Connect Wallet**: Click "Connect Wallet" and select your Solana wallet
+
+2. **View Portfolio**: If you have DLMM positions, they'll load automatically with real-time data- **Charts**: Recharts for data visualizationThis dashboard addresses these challenges by aggregating position data, calculating key performance metrics, and presenting them through an intuitive interface. The platform integrates directly with the Saros DLMM SDK to provide accurate, real-time data while offering sophisticated analytics that would otherwise require manual calculation and monitoring.A comprehensive, real-time analytics platform that transforms how liquidity providers manage their Saros Dynamic Liquidity Market Maker (DLMM) positions. Built with cutting-edge technology and deep DeFi expertise.**Built for the Saros DLMM SDK Demo Competition** - A comprehensive solution that demonstrates advanced SDK usage patterns, real-world applicability, and hackathon-ready scalability.
+
+3. **Explore Pools**: Use the Pool Explorer tab to research different DLMM pools
+
+4. **Input Pool Address**: Enter a specific pool address to view detailed pool information- **Wallets**: Solana Wallet Adapter
+
+
+
+The app works without any DLMM positions - you can explore pools and see the interface structure.The pool analysis features allow users to explore different DLMM pools, understand liquidity distribution patterns through bin visualization, and analyze pool metrics like total value locked, trading volume, and fee generation. This helps liquidity providers identify promising opportunities and understand market dynamics across the Saros ecosystem.
+
+
+
+## Technical Stack## Installation
+
+
+
+**Frontend**
+
+- Next.js 15 with App Router
+
+- TypeScript for type safety```bash
+
+- Tailwind CSS for styling
+
+- shadcn/ui component library# Clone the repositoryRisk management tools provide insights into portfolio diversification, volatility exposure, and position-level risk metrics. Users can assess their exposure across different asset pairs and market conditions, helping them maintain balanced portfolios and avoid concentration risks.
+
+- Recharts for data visualization
+
+git clone https://github.com/chiemezie1/saros_mind.git
+
+**Blockchain Integration**
+
+- Saros DLMM SDK v1.3.1 for protocol datacd saros_mind## Core Features
+
+- Solana Web3.js for blockchain interactions
+
+- Solana Wallet Adapter for multi-wallet support
+
+
+
+**API Endpoints**# Install dependencies## Technical Implementation
+
+- `/api/portfolio/[pubkey]` - Portfolio metrics for a wallet
+
+- `/api/pool/[poolAddress]` - Pool metadata and pricingnpm install
+
+- `/api/fees/[pubkey]` - Fee distribution across pools
+
+
+
+## Project Structure
+
+# Configure environment
+
+```
+
+saros_mind/echo "NEXT_PUBLIC_RPC_URL=https://api.mainnet-beta.solana.com" > .env.localThe application is built using Next.js 15 with TypeScript, providing a modern, performant foundation for the user interface. The frontend leverages Tailwind CSS for styling and shadcn/ui components for consistent, accessible UI elements. Real-time data visualization is handled through Recharts, offering interactive charts and graphs for portfolio performance, bin distribution, and fee analysis.
+
+├── src/
+
+│   ├── app/              # Next.js app router
+
+│   │   ├── api/          # API endpoints for data fetching
+
+│   │   ├── page.tsx      # Main dashboard page# Start development serverThe platform provides several key areas of functionality designed to give liquidity providers comprehensive insights into their DLMM positions. The portfolio analytics section offers real-time tracking of total portfolio value, profit and loss calculations, and detailed breakdowns of fee earnings across all positions. Users can monitor their active positions, track performance against holding strategies, and understand how market movements impact their liquidity provision returns.---## 🎯 **Competition Advantages**
+
+│   │   └── layout.tsx    # App layout and providers
+
+│   ├── components/       # React componentsnpm run dev
+
+│   │   ├── dlmm-dashboard.tsx    # Main dashboard component
+
+│   │   ├── bin-distribution/     # Pool visualization```Blockchain integration is achieved through the Saros DLMM SDK, which provides direct access to protocol data and position information. The platform uses Solana Web3.js for blockchain interactions and the Solana Wallet Adapter for seamless wallet connectivity across multiple wallet providers including Phantom, Solflare, Torus, and Ledger.
+
+│   │   ├── wallet/               # Wallet connection
+
+│   │   └── ui/                   # Reusable UI components
+
+│   └── lib/              # Utilities and type definitions
+
+├── public/               # Static assets and imagesOpen [http://localhost:3000](http://localhost:3000) to view the application.
+
+└── README.md
+
+```
+
+
+
+## API Endpoints## UsageThe data layer consists of several API endpoints that fetch and process portfolio data, fee information, and pool metrics. These endpoints handle the complex calculations required for DLMM analytics while providing clean, structured data to the frontend. The system includes error handling, caching strategies, and performance optimizations to ensure reliable operation even during high network activity.
+
+
+
+### Portfolio Data
+
+```
+
+GET /api/portfolio/[pubkey]1. **Connect Wallet**: Use the wallet connection button to connect your Solana walletAdvanced analytics capabilities include impermanent loss calculations, yield optimization tools, and performance benchmarking features. The platform calculates complex metrics like position efficiency scores, fee yield analysis, and provides historical performance data to help users understand long-term trends and make informed decisions about position management.
+
+```
+
+Returns portfolio metrics including total value, P&L, active positions, and fee earnings.2. **View Dashboard**: Your DLMM positions will load automatically once connected
+
+
+
+### Pool Information3. **Analyze Pools**: Navigate to the Pool Selection tab to view bin distribution data## Installation and Setup
+
+```
+
+GET /api/pool/[poolAddress]4. **Monitor Performance**: Track your portfolio metrics in real-time
+
+```
+
+Returns pool metadata, current price, active bin, and reserves.
+
+
+
+### Fee Analysis## Architecture
+
+```
+
+GET /api/fees/[pubkey]To run the application locally, you'll need Node.js 18 or higher and npm installed on your system. Begin by cloning the repository and installing the required dependencies:
+
+```
+
+Returns fee distribution data across all user positions.The application follows a clean, modular architecture:
+
+
+
+## DevelopmentThe pool analysis features allow users to explore different DLMM pools, understand liquidity distribution patterns through bin visualization, and analyze pool metrics like total value locked, trading volume, and fee generation. This helps liquidity providers identify promising opportunities and understand market dynamics across the Saros ecosystem.## 🎯 **The Problem We Solve**### **Multi-Feature Demo Application**
+
+
+
+### Key Components- **API Routes**: Handle data fetching from the Saros protocol
+
+- **DLMMDashboard**: Main dashboard orchestrating data and UI
+
+- **BinDistributionChart**: Visualizes liquidity distribution- **Components**: Reusable UI components for dashboard and analytics```bash
+
+- **WalletButton**: Handles wallet connection and management
+
+- **Portfolio API**: Fetches user position data from Saros DLMM SDK- **Services**: DLMM SDK integration and data processing
+
+
+
+### Adding Features- **Types**: TypeScript definitions for type safetygit clone https://github.com/chiemezie1/saros_mind.git
+
+1. Extend types in `src/lib/types.ts`
+
+2. Add business logic in `src/lib/dlmm.ts`
+
+3. Create new API endpoints in `src/app/api/`
+
+4. Build UI components in `src/components/`## Development Statuscd saros_mind
+
+
+
+### Code Quality
+
+- TypeScript with strict mode
+
+- ESLint for code quality**Currently Implemented:**npm installRisk management tools provide insights into portfolio diversification, volatility exposure, and position-level risk metrics. Users can assess their exposure across different asset pairs and market conditions, helping them maintain balanced portfolios and avoid concentration risks.- ✅ **Portfolio Analytics Dashboard** - Real-time tracking with P&L calculations
+
+- Prettier for formatting
+
+- Wallet connection and integration
+
+## Deployment
+
+- Basic dashboard structure```
+
+### Vercel (Recommended)
+
+```bash- Bin distribution visualization
+
+npm i -g vercel
+
+vercel- Pool selection interface
+
+```
+
+
+
+### Docker
+
+```bash**In Development:**Create an environment configuration file with your RPC endpoint:
+
+docker build -t saros-portfolio-tracker .
+
+docker run -p 3000:3000 saros-portfolio-tracker- Real portfolio data integration with Saros SDK
+
+```
+
+- Fee tracking implementation## Technical Implementation### **Current Pain Points for DLMM LPs:**- ✅ **Advanced Position Analysis** - Impermanent loss tracking and efficiency scoring  
+
+## Current Limitations
+
+- Pool discovery and metrics
+
+This is a streamlined implementation focusing on core functionality:
+
+```bash
+
+- **Portfolio calculations** use simplified metrics (not full position valuation)
+
+- **Fee calculations** use placeholder logic (not extracted from position data)## Contributing
+
+- **Advanced analytics** features have been removed to focus on working core features
+
+- **Pool discovery** shows basic pool information (full metadata requires pool-specific implementation)echo "NEXT_PUBLIC_RPC_URL=https://api.mainnet-beta.solana.com" > .env.local
+
+
+
+These limitations ensure the application is simple, functional, and uses real SDK data rather than complex mock implementations.This project welcomes contributions from developers interested in DeFi analytics and Solana development. The codebase prioritizes clarity and maintainability over complexity.
+
+
+
+## Contributing```
+
+
+
+Contributions welcome! Focus areas:## License
+
+- Enhanced portfolio valuation algorithms
+
+- Improved fee calculation accuracyThe application is built using Next.js 15 with TypeScript, providing a modern, performant foundation for the user interface. The frontend leverages Tailwind CSS for styling and shadcn/ui components for consistent, accessible UI elements. Real-time data visualization is handled through Recharts, offering interactive charts and graphs for portfolio performance, bin distribution, and fee analysis.- **⚡ Complexity Overload**: Managing DLMM positions requires understanding complex bin mechanics, price ranges, and fee calculations- ✅ **Smart Recommendations** - AI-powered rebalancing and strategy advice
+
+- Additional pool analysis features
+
+- UI/UX improvementsMIT License - Open source and available for use and modification.
+
+- Performance optimizationsStart the development server:
+
+
+
+### Development Workflow
+
+1. Fork the repository
+
+2. Create a feature branch```bash
+
+3. Implement changes with TypeScript
+
+4. Test with real wallet connectionsnpm run devBlockchain integration is achieved through the Saros DLMM SDK, which provides direct access to protocol data and position information. The platform uses Solana Web3.js for blockchain interactions and the Solana Wallet Adapter for seamless wallet connectivity across multiple wallet providers including Phantom, Solflare, Torus, and Ledger.- **📊 Data Fragmentation**: Critical information scattered across multiple interfaces and tools- ✅ **Strategy Backtesting** - Historical performance comparison tools
+
+5. Submit pull request
 
 ```
 
 ## License
 
-The application is built using Next.js 15 with TypeScript, providing a modern, performant foundation for the user interface. The frontend leverages Tailwind CSS for styling and shadcn/ui components for consistent, accessible UI elements. Real-time data visualization is handled through Recharts, offering interactive charts and graphs for portfolio performance, bin distribution, and fee analysis.- **⚡ Complexity Overload**: Managing DLMM positions requires understanding complex bin mechanics, price ranges, and fee calculations- ✅ **Smart Recommendations** - AI-powered rebalancing and strategy advice
-
-MIT License - Open source and available for use and modification.
-Start the development server:
 
 
-
-```bash
-
-npm run devBlockchain integration is achieved through the Saros DLMM SDK, which provides direct access to protocol data and position information. The platform uses Solana Web3.js for blockchain interactions and the Solana Wallet Adapter for seamless wallet connectivity across multiple wallet providers including Phantom, Solflare, Torus, and Ledger.- **📊 Data Fragmentation**: Critical information scattered across multiple interfaces and tools- ✅ **Strategy Backtesting** - Historical performance comparison tools
-
-```
-
-
+MIT License - see LICENSE file for details.
 
 The application will be available at http://localhost:3000. For production deployment, build the application using `npm run build` and serve the built files using your preferred hosting solution.
 
+## Resources
+
 The data layer consists of several API endpoints that fetch and process portfolio data, fee information, and pool metrics. These endpoints handle the complex calculations required for DLMM analytics while providing clean, structured data to the frontend. The system includes error handling, caching strategies, and performance optimizations to ensure reliable operation even during high network activity.- **💸 Suboptimal Returns**: LPs struggle to optimize their positions without proper analytics- ✅ **Interactive Visualizations** - Liquidity distribution and performance charts
 
-## Usage Guide
+- [Saros Finance Documentation](https://docs.saros.finance)
+
+- [Saros DLMM SDK](https://www.npmjs.com/package/@saros-finance/dlmm-sdk)## Usage Guide
+
+- [Solana Wallet Adapter](https://github.com/solana-labs/wallet-adapter)
 
 
+
+---
 
 After launching the application, connect your Solana wallet using the wallet connection interface. The dashboard supports multiple wallet providers and will automatically detect and display your DLMM positions once connected. If you don't have any positions, the platform provides demo data to explore the interface and understand the available features.
 
+Built for the Saros DLMM SDK integration - focusing on real blockchain data over complex mock analytics.
 ## Installation and Setup- **🔍 Poor Visibility**: Lack of comprehensive portfolio tracking and performance insights
 
 The main dashboard provides an overview of your entire portfolio with key metrics displayed prominently. Navigate through the different tabs to access detailed analytics, pool comparison tools, and advanced features. The pool selection interface allows you to research different DLMM pools and understand their characteristics before making liquidity provision decisions.

@@ -36,11 +36,9 @@ import {
   PortfolioMetrics, 
   FeeDistribution, 
   PoolMetrics,
-  PerformanceAttribution,
-  ApiResponse 
+  ApiResponse
 } from '@/lib/types';
-import { BinDistributionChart } from './bin-distribution/chart';
-import { ResponsiveContainer, PieChart, Pie, Cell, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
+import { ResponsiveContainer, PieChart, Pie, Cell, Tooltip } from 'recharts';
 
 /**
  * DASHBOARD COMPONENT PROPS
@@ -66,9 +64,6 @@ export function DLMMDashboard({ userPublicKey, poolAddress = "9P3N4QxjMumpTNNdva
   const [portfolioMetrics, setPortfolioMetrics] = useState<PortfolioMetrics | null>(null);
   const [feeDistribution, setFeeDistribution] = useState<FeeDistribution[]>([]);
   const [poolMetrics, setPoolMetrics] = useState<PoolMetrics | null>(null);
-  const [performanceData, setPerformanceData] = useState<any[]>([]);
-  const [binData, setBinData] = useState<any[]>([]); // For liquidity distribution
-  
   // UI State Management
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -176,8 +171,7 @@ export function DLMMDashboard({ userPublicKey, poolAddress = "9P3N4QxjMumpTNNdva
           ]);
         }
 
-        // Performance data will be empty until real implementation
-        setPerformanceData([]);
+        // Performance data will be implemented later
 
       } catch (err) {
         setError('Failed to load dashboard data');
@@ -355,39 +349,9 @@ export function DLMMDashboard({ userPublicKey, poolAddress = "9P3N4QxjMumpTNNdva
                 <CardDescription>30-day performance history</CardDescription>
               </CardHeader>
               <CardContent>
-                <ResponsiveContainer width="100%" height={300}>
-                  <LineChart data={performanceData}>
-                    <CartesianGrid strokeDasharray="3 3" />
-                    <XAxis 
-                      dataKey="timestamp" 
-                      tickFormatter={(value) => new Date(value).toLocaleDateString()}
-                    />
-                    <YAxis />
-                    <Tooltip 
-                      labelFormatter={(value) => new Date(value).toLocaleDateString()}
-                      formatter={(value: number, name: string) => [
-                        `$${value.toFixed(2)}`, 
-                        name === 'totalValue' ? 'Portfolio Value' : 'HODL Value'
-                      ]}
-                    />
-                    <Legend />
-                    <Line 
-                      type="monotone" 
-                      dataKey="totalValue" 
-                      stroke="#8884d8" 
-                      strokeWidth={2}
-                      name="Portfolio Value"
-                    />
-                    <Line 
-                      type="monotone" 
-                      dataKey="hodlValue" 
-                      stroke="#82ca9d" 
-                      strokeWidth={2}
-                      strokeDasharray="5 5"
-                      name="HODL Value"
-                    />
-                  </LineChart>
-                </ResponsiveContainer>
+                <div className="text-center text-gray-500 py-8">
+                  Performance chart coming soon...
+                </div>
               </CardContent>
             </Card>
 
@@ -432,7 +396,10 @@ export function DLMMDashboard({ userPublicKey, poolAddress = "9P3N4QxjMumpTNNdva
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <BinDistributionChart binData={binData} />
+              {/* Bin distribution chart is handled in main page */}
+              <div className="text-center text-gray-500">
+                Liquidity distribution visualization coming soon...
+              </div>
             </CardContent>
           </Card>
         </TabsContent>

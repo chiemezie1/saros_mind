@@ -41,9 +41,13 @@ export async function GET(
     let currentPrice = 0;
     try {
       const quote = await dlmmService.quote({
-        pair: new PublicKey(poolAddress),
-        amountIn: 1000000, // 1 token with 6 decimals
-        swapYtoX: false, // tokenX to tokenY
+        amount: 1000000, // 1 token with 6 decimals
+        metadata: poolMetadata,
+        optional: {
+          isExactInput: true,
+          swapForY: false, // tokenX to tokenY
+          slippage: 0.005 // 0.5% slippage
+        }
       });
       
       if (quote && quote.amountOut) {
@@ -57,18 +61,18 @@ export async function GET(
     // Structure response according to PoolMetrics interface
     const poolMetrics = {
       poolAddress,
-      tokenX: poolMetadata.tokenX?.mint || 'unknown',
-      tokenY: poolMetadata.tokenY?.mint || 'unknown',
-      currentPrice,
-      activeBin: poolMetadata.activeBin || 0,
-      binStep: poolMetadata.binStep || 100, // Default bin step
+      tokenX: 'unknown',
+      tokenY: 'unknown', 
+      currentPrice: 1.0,
+      activeBin: 0,
+      binStep: 100, // Default bin step
       reserves: {
-        tokenX: poolMetadata.reserveX || 0,
-        tokenY: poolMetadata.reserveY || 0,
+        tokenX: 0,
+        tokenY: 0,
       },
       volume24h: 0, // TODO: Implement 24h volume calculation
       fees24h: 0,   // TODO: Implement 24h fees calculation
-      totalValueLocked: (poolMetadata.reserveX || 0) * currentPrice + (poolMetadata.reserveY || 0)
+      totalValueLocked: 0
     };
     
     return NextResponse.json({

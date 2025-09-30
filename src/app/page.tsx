@@ -1,5 +1,5 @@
 /**
- * SAROS DLMM ANALYTICS - MAIN APPLICATION PAGE
+ * SARimport React, { useEffect, useState } from \"react\";mport React, { useEffect, useState, useCallback } from \"react\";mport React, { useEffect, useState, useCallback } from \"react\";S DLMM ANALYTICS - MAIN APPLICATION PAGE
  * 
  * This is the primary entry point for the Saros DLMM Analytics Dashboard.
  * It provides a comprehensive interface for analyzing DLMM pools and portfolios
@@ -36,14 +36,14 @@ export default function SarosDLMMAnalytics() {
   const { connected, publicKey } = useWallet();
   
   // State for bin distribution data
-  const [binData, setBinData] = useState<BinLiquidityData[]>([]);
+  const [activeBinData, setActiveBinData] = useState<BinLiquidityData[] | null>(null);
   
   // State for pool selection
   const [selectedPool, setSelectedPool] = useState<string>("9P3N4QxjMumpTNNdvaNNskXu2t7VHMMXtePQB72kkSAk");
   const [poolName, setPoolName] = useState<string>("USDC/USDT");
   
   // TODO: Replace with real pool data from Saros DLMM SDK
-  const availablePools: any[] = [];
+  const availablePools: unknown[] = [];
 
   /**
    * BIN DATA FETCHER
@@ -54,11 +54,11 @@ export default function SarosDLMMAnalytics() {
     
     try {
       const data = await getBinLiquidity(targetPool);
-      setBinData(data);
+      setActiveBinData(data);
       console.log(`✅ Loaded ${data.length} active bins`);
     } catch (error) {
       console.error('❌ Error fetching bin data:', error);
-      setBinData([]);
+      setActiveBinData([]);
     }
   };
 
@@ -168,16 +168,14 @@ export default function SarosDLMMAnalytics() {
                     </p>
                   </div>
                 ) : (
+                                  ) : (
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                    {availablePools.map((pool) => (
-                      <Card 
-                        key={pool.address}
-                        className={`cursor-pointer transition-all duration-200 hover:shadow-lg ${
-                          selectedPool === pool.address 
-                            ? 'ring-2 ring-purple-500 bg-purple-500/10' 
-                            : 'hover:bg-gray-800/50'
-                        }`}
-                        onClick={() => handlePoolSelect(pool.address, pool.name)}
+                    {/* Pool discovery not yet implemented */}
+                    <Card className="p-6 text-center border-dashed border-2 border-gray-300">
+                      <p className="text-gray-500">Pool discovery not yet implemented</p>
+                      <p className="text-sm text-gray-400 mt-2">Using default USDC/USDT pool</p>
+                    </Card>
+                  </div>
                       >
                         <CardContent className="p-4">
                           <div className="space-y-3">
@@ -234,7 +232,7 @@ export default function SarosDLMMAnalytics() {
                   <p className="text-gray-400">
                     Live liquidity distribution for {poolName} pool ({selectedPool.slice(0, 8)}...)
                   </p>
-                  <BinDistributionChart binData={binData} />
+                  <BinDistributionChart binData={activeBinData || []} />
                 </div>
               </CardContent>
             </Card>
