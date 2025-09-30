@@ -16,6 +16,7 @@ import { BinLiquidityData } from "@/lib/types";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import { 
   RefreshCw, 
   BarChart3, 
@@ -24,7 +25,6 @@ import {
   CheckCircle2,
   Wallet
 } from "lucide-react";
-import { formatNumber } from "@/lib/utils";
 import { WalletButton } from "@/components/wallet/WalletButton";
 import { useWallet } from '@solana/wallet-adapter-react';
 
@@ -41,9 +41,10 @@ export default function SarosDLMMAnalytics() {
   // State for pool selection
   const [selectedPool, setSelectedPool] = useState<string>("9P3N4QxjMumpTNNdvaNNskXu2t7VHMMXtePQB72kkSAk");
   const [poolName, setPoolName] = useState<string>("USDC/USDT");
+  const [poolAddressInput, setPoolAddressInput] = useState<string>("");
   
   // TODO: Replace with real pool data from Saros DLMM SDK
-  const availablePools: unknown[] = [];
+  // const availablePools: unknown[] = [];
 
   /**
    * BIN DATA FETCHER
@@ -71,9 +72,21 @@ export default function SarosDLMMAnalytics() {
     getActiveBinData(poolAddress);
   };
 
+  /**
+   * HANDLE POOL ADDRESS INPUT
+   */
+  const handlePoolAddressSubmit = () => {
+    if (poolAddressInput.trim()) {
+      const shortAddress = poolAddressInput.slice(0, 8) + "...";
+      handlePoolSelect(poolAddressInput.trim(), `Pool ${shortAddress}`);
+      setPoolAddressInput("");
+    }
+  };
+
   // Initialize data on component mount
   useEffect(() => {
     getActiveBinData();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -158,24 +171,68 @@ export default function SarosDLMMAnalytics() {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                {availablePools.length === 0 ? (
-                  <div className="text-center py-8">
-                    <p className="text-muted-foreground mb-4">
-                      Pool discovery not yet implemented
-                    </p>
-                    <p className="text-sm text-muted-foreground">
-                      Connect to Saros DLMM SDK to fetch available pools
-                    </p>
+                <div className="space-y-6">
+                  {/* Pool Address Input */}
+                  <div className="space-y-4">
+                    <div>
+                      <label htmlFor="poolAddress" className="block text-sm font-medium mb-2">
+                        Enter Pool Address
+                      </label>
+                      <div className="flex gap-2">
+                        <Input
+                          id="poolAddress"
+                          placeholder="Enter Saros DLMM pool address..."
+                          value={poolAddressInput}
+                          onChange={(e: React.ChangeEvent<HTMLInputElement>) => setPoolAddressInput(e.target.value)}
+                          className="flex-1"
+                        />
+                        <Button 
+                          onClick={handlePoolAddressSubmit}
+                          disabled={!poolAddressInput.trim()}
+                        >
+                          Analyze Pool
+                        </Button>
+                      </div>
+                    </div>
+                    
+                    {/* Current Pool Display */}
+                    <div className="p-4 border rounded-lg bg-muted/50">
+                      <div className="flex items-center justify-between">
+                        <div>
+                          <h3 className="font-semibold">{poolName}</h3>
+                          <p className="text-sm text-muted-foreground">
+                            {selectedPool.slice(0, 8)}...{selectedPool.slice(-8)}
+                          </p>
+                        </div>
+                        <Button 
+                          variant="outline" 
+                          size="sm"
+                          onClick={() => getActiveBinData(selectedPool)}
+                        >
+                          <RefreshCw className="h-4 w-4 mr-2" />
+                          Refresh
+                        </Button>
+                      </div>
+                    </div>
                   </div>
-                ) : (
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                    {/* Pool discovery not yet implemented */}
-                    <Card className="p-6 text-center border-dashed border-2 border-gray-300">
-                      <p className="text-gray-500">Pool discovery not yet implemented</p>
-                      <p className="text-sm text-gray-400 mt-2">Using default USDC/USDT pool</p>
-                    </Card>
+                  
+                  {/* Example Pools */}
+                  <div>
+                    <h4 className="font-medium mb-3">Example Pools:</h4>
+                    <div className="grid grid-cols-1 gap-2">
+                      <Button 
+                        variant="ghost" 
+                        className="justify-start h-auto p-3"
+                        onClick={() => handlePoolSelect("9P3N4QxjMumpTNNdvaNNskXu2t7VHMMXtePQB72kkSAk", "USDC/USDT")}
+                      >
+                        <div className="text-left">
+                          <div className="font-medium">USDC/USDT Pool</div>
+                          <div className="text-sm text-muted-foreground">9P3N4Qxj...kkSAk</div>
+                        </div>
+                      </Button>
+                    </div>
                   </div>
-                )}
+                </div>
               </CardContent>
             </Card>
 

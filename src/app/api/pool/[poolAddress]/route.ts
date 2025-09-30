@@ -38,7 +38,7 @@ export async function GET(
 
     // Get quote to determine current price
     try {
-      const quote = await dlmmService.quote({
+      await dlmmService.quote({
         amount: 1000000, // 1 token with 6 decimals
         metadata: poolMetadata,
         optional: {

@@ -8,10 +8,12 @@
 
 "use client";
 
+import React, { useState } from 'react';
 import { useWallet } from '@solana/wallet-adapter-react';
 import { Button } from '@/components/ui/button';
+import Image from 'next/image';
 import { Wallet, Copy, ChevronDown } from 'lucide-react';
-import { useState, useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 
 /**
  * CUSTOM WALLET BUTTON COMPONENT
@@ -116,9 +118,11 @@ export function WalletButton() {
               className="w-full px-4 py-3 text-left hover:bg-gray-700 first:rounded-t-lg last:rounded-b-lg flex items-center gap-3"
             >
               {wallet.adapter.icon && (
-                <img
+                <Image
                   src={wallet.adapter.icon}
                   alt={wallet.adapter.name}
+                  width={24}
+                  height={24}
                   className="w-6 h-6"
                 />
               )}
